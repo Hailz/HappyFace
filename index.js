@@ -5,13 +5,16 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('./config/passportConfig');
-var isLoggedin = require('./middleware/isLoggedin');
+var isLoggedIn = require('./middleware/isLoggedIn');
+var loggedIn=false;
 
 require('dotenv').config();
 
 var app = express();
 
 //set and use statements
+app.use(express.static(__dirname + '/public'));
+
 app.set("view engine", 'ejs');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(ejsLayouts);
@@ -33,17 +36,52 @@ app.use(function(req, res, next){ //custom middleware
 //routes
 app.get('/', function(req, res){
   res.render('home');
-
 });
 
-app.get('/profile', isLoggedin, function(req, res){
-  res.render("profile");
+app.get('/vanity', isLoggedIn, function(req, res){
+  res.render("vanity");
+});
 
+// all the vanity links
+app.get('/productType/blush', isLoggedIn, function(req, res){
+  res.render("productType/blush");
+});
+
+app.get('/productType/bronzer', isLoggedIn, function(req, res){
+  res.render("productType/bronzer");
+});
+
+app.get('/productType/eyeliner', isLoggedIn, function(req, res){
+  res.render("productType/eyeliner");
+});
+
+app.get('/productType/eyeshadow', isLoggedIn, function(req, res){
+  res.render("productType/eyeshadow");
+});
+
+app.get('/productType/foundation', isLoggedIn, function(req, res){
+  res.render("productType/foundation");
+});
+
+app.get('/productType/lipliner', isLoggedIn, function(req, res){
+  res.render("productType/lipliner");
+});
+
+app.get('/productType/lipstick', isLoggedIn, function(req, res){
+  res.render("productType/lipstick");
+});
+
+app.get('/productType/mascara', isLoggedIn, function(req, res){
+  res.render("productType/mascara");
+});
+
+app.get('/productType/nailpolish', isLoggedIn, function(req, res){
+  res.render("productType/nailpolish");
 });
 
 app.use('/auth', require('./controllers/auth'));
 
-//controllers
+app.use('/search', require('./controllers/search'));
 
 
 //listen

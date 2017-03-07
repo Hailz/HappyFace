@@ -17,10 +17,10 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      firstName: {
+      firstname: {
         type: Sequelize.STRING
       },
-      lastName: {
+      lastname: {
         type: Sequelize.STRING
       },
       createdAt: {

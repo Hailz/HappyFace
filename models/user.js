@@ -21,12 +21,12 @@ module.exports = function(sequelize, DataTypes) {
         }
       }
     },
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING
+    firstname: DataTypes.STRING,
+    lastname: DataTypes.STRING
     }, {
     hooks:{
       beforeCreate: function(createdUser, options, callback){
-        var hash = bcrypt.hasSync(createdUser.password, 10);
+        var hash = bcrypt.hashSync(createdUser.password, 10);
         createdUser.password = hash;
         callback(null, createdUser);
       }
@@ -37,7 +37,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     instanceMethods:{
-      isValidePassword: function(passwordTyped){
+      isValidPassword: function(passwordTyped){
         return bcrypt.compareSync(passwordTyped, this.password);
       },
       toJSON: function(){
