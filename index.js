@@ -6,7 +6,8 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('./config/passportConfig');
 var isLoggedIn = require('./middleware/isLoggedIn');
-var loggedIn=false;
+var request = require('request');
+
 
 require('dotenv').config();
 
@@ -79,9 +80,38 @@ app.get('/productType/nailpolish', isLoggedIn, function(req, res){
   res.render("productType/nailpolish");
 });
 
-app.use('/auth', require('./controllers/auth'));
+//search
+app.get('/', function(req, res){
+  console.log(req.body);
+});
 
-app.use('/search', require('./controllers/search'));
+app.get('/results', function(req, res){
+  console.log(req.query);
+
+  var qs = {};
+
+  if( 'brand' in req.query && req.query.brand ) {
+    qs.brand = req.query.brand;
+  }
+
+  if( 'tag' in req.query && req.query.tag instanceof Array) {
+    qs.product_tags = req.query.tag.join(",");
+  }
+
+  request({
+    url: 'http://makeup-api.herokuapp.com/api/v1/products.json?',
+    qs: qs
+  }, function(error, response, body){
+    if(!error && response.statusCode == 200){
+      var dataObj = JSON.parse(body);
+      res.render('results', {results:dataObj});
+    } else{
+      res.send('Oh bananas. Error ' + error);
+    }
+  });
+});
+
+app.use('/auth', require('./controllers/auth'));
 
 
 //listen

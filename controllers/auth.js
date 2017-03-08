@@ -11,7 +11,6 @@ router.get('/login', function(req, res){
 router.post('/login', passport.authenticate('local',{
   successRedirect: '/vanity',
   successFlash: "Good, you logged in!",
-  success: loggedIn=true,
   failureRedirect: "/auth/login",
   failureFlash: "Invalid Credentials. Try again."
 }));
@@ -21,8 +20,6 @@ router.get('/signup', function(req, res){
 });
 
 router.post('/signup', function(req, res, next){
-  console.log(req.body);
-
   db.user.findOrCreate({
     where: {email: req.body.email},
     defaults: {
@@ -37,8 +34,7 @@ router.post('/signup', function(req, res, next){
       //good
       passport.authenticate('local', {
         successRedirect: "/vanity",
-        successFlash: "Account created and logged in. You're ready to go!",
-        success: loggedIn=true
+        successFlash: "Account created and logged in. You're ready to go!"
       })(req, res, next);
     } else{
       //already found, bad
@@ -56,7 +52,6 @@ router.get('/logout', function(req, res){
   //res.send('logged out :( ');
   req.logout();
   req.flash("You logged out :(");
-  loggedIn=false;
   res.redirect('/');
 });
 
