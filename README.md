@@ -22,6 +22,7 @@ I drew out a rough draft of what I wanted my views to look like, how I wanted to
 I finished getting authentication running. I did a little more light styling and found images to be used later. I started working on getting the search information from my form and submitting it to my API.
 
 # Day 3
+Finished selecting what API data I wanted to keep and work with. Started working on saving products to the vanity.
 
 # Technologies Used
 
@@ -32,4 +33,11 @@ I finished getting authentication running. I did a little more light styling and
 
 # Bumps in the Road
 
-I struggled a lot with the Node/Express concepts. Working my recently developed skills into it was difficult for me. I found a lot of the things that I had done before didn't work now.
+I struggled a lot with the Node/Express concepts. Working my recently developed skills into it was difficult for me. I found a lot of the things that I had done before couldn't be implemented in the same ways.
+
+# Next Steps
+*Create favorite saving functionality
+*Create favorite deleting functionality
+*Create product name search functionality
+*Style
+*Use second API to allow for searches by barcode

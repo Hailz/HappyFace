@@ -1,5 +1,17 @@
 <h1>My Vanity</h1>
 
+<div>
+  <% if(product.length){ %>
+      <% product.forEach(function(){ %>
+        <a href="<%= product.product_link %>">
+        <img src="<%= product.image_link %>">
+        </a>
+        <h3><%= product.name %></h3>
+     <% }) %>
+  <% } %>
+</div>
+
+<!-- Goal navigation
 <div class="text-center box">
   <a class="btn btn-link type" href="./productType/blush">Blush</a>
   <a class="btn btn-link type" href="./productType/bronzer">Bronzer</a>
@@ -10,4 +22,4 @@
   <a class="btn btn-link type" href="./productType/lipstick">Lipstick</a>
   <a class="btn btn-link type" href="./productType/mascara">Mascara</a>
   <a class="btn btn-link type" href="./productType/nailpolish">Nail Polish</a>
-</div>
+</div> -->

@@ -7,7 +7,7 @@ var flash = require('connect-flash');
 var passport = require('./config/passportConfig');
 var isLoggedIn = require('./middleware/isLoggedIn');
 var request = require('request');
-
+var name;
 
 require('dotenv').config();
 
@@ -88,12 +88,15 @@ app.get('/', function(req, res){
 app.get('/results', function(req, res){
   console.log(req.query);
 
-  var qs = {};
+  if('productName' in req.query && req.query.name instanceof String){
+    name = req.query.name  
+  }
+  console.log(name);
 
+  var qs = {};
   if( 'brand' in req.query && req.query.brand ) {
     qs.brand = req.query.brand;
   }
-
   if( 'tag' in req.query && req.query.tag instanceof Array) {
     qs.product_tags = req.query.tag.join(",");
   }
@@ -112,7 +115,7 @@ app.get('/results', function(req, res){
 });
 
 app.use('/auth', require('./controllers/auth'));
-
+app.use('/vanity', require('./controllers/vanity'));
 
 //listen
 app.listen(3000);
