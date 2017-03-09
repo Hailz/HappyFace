@@ -34,7 +34,7 @@ h1{
 .box{
   background-color: rgba(190,151,151, .9);
 }
-#result{
+.result{
   display: inline-block;
   max-width: 33%;
   background-color: cream;

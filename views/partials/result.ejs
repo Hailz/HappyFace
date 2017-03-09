@@ -1,17 +1,19 @@
 <!-- <%= JSON.stringify(result); %> -->
 
-<div id="result">
+<div class="result">
   <a href="<%= result.product_link %>">
-  <img src="<%= result.image_link %>">
+   <img src="<%= result.image_link %>">
   </a>
   <h3><%= result.name %></h3>
   <!-- <p><%= result.description %></p> -->
-  <form method="POST" action="/product">
-    <input hidden type="text" name="name" value="<%= result.name %>">
-    <input hidden type="text" name="productType" value=" <%= result.product_type %>">
-    <input hidden type="text" name="imageLink" value=" <%= result.image_link %>">
-    <input hidden type="text" name="productLink" value=" <%= result.product_link %>">
-    <input type="hidden" name="userid" value="<%= user.id %>">
-    <button class="btn" type="submit">Add to Vanity</button>
-  </form>
+
+  <% if(currentUser){ %>
+    <form method="POST" action="/vanity">
+      <input hidden type="text" name="name" value="<%= result.name %>">
+      <input hidden type="text" name="productType" value=" <%= result.product_type %>">
+      <input hidden type="text" name="imageLink" value=" <%= result.image_link %>">
+      <input hidden type="text" name="productLink" value=" <%= result.product_link %>">
+      <button class="btn" type="submit">Add to Vanity</button>
+    </form>
+  <% } %>
 </div>

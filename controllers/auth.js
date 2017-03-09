@@ -9,7 +9,7 @@ router.get('/login', function(req, res){
 });
 
 router.post('/login', passport.authenticate('local',{
-  successRedirect: '/vanity',
+  successRedirect: '/',
   successFlash: "Good, you logged in!",
   failureRedirect: "/auth/login",
   failureFlash: "Invalid Credentials. Try again."
@@ -33,7 +33,7 @@ router.post('/signup', function(req, res, next){
    if(wasCreated){
       //good
       passport.authenticate('local', {
-        successRedirect: "/vanity",
+        successRedirect: "/",
         successFlash: "Account created and logged in. You're ready to go!"
       })(req, res, next);
     } else{

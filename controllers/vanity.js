@@ -4,18 +4,21 @@ var request = require('request');
 var db = require('../models');
 var app =express();
 
+router.get('/result', function(req, res){
+  
+});
 
-router.post('/result', function(req, res){
-  console.log(req.body);
+router.post('/', function(req, res){
+  console.log(req.user.id);
   db.product.create({
-    userId: req.body.userId,
+    userId: req.user.id,
     name: req.body.name,
     productType: req.body.product_type,
     imageLink: req.body.image_link,
     productLink: req.body.product_link
   })
   .then(function(product){
-    res.send('Product added to your vanity!')
+    res.render('/result')
   })
   .catch(function(error){
     res.status(400).send('Whoops');

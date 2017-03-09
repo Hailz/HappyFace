@@ -7,6 +7,7 @@ var flash = require('connect-flash');
 var passport = require('./config/passportConfig');
 var isLoggedIn = require('./middleware/isLoggedIn');
 var request = require('request');
+var db = require('./models');
 var name;
 
 require('dotenv').config();
@@ -110,7 +111,6 @@ app.get('/results', function(req, res){
     }
   });
 });
-
 
 app.use('/auth', require('./controllers/auth'));
 app.use('/vanity', require('./controllers/vanity'));
