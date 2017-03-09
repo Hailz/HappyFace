@@ -13,12 +13,12 @@ router.post('/', function(req, res){
   db.product.create({
     userId: req.user.id,
     name: req.body.name,
-    productType: req.body.product_type,
-    imageLink: req.body.image_link,
-    productLink: req.body.product_link
+    productType: req.body.productType,
+    imageLink: req.body.imageLink,
+    productLink: req.body.productLink
   })
   .then(function(product){
-    res.render('/result')
+    res.render('/')
   })
   .catch(function(error){
     res.status(400).send('Whoops');
