@@ -87,12 +87,10 @@ app.get('/', function(req, res){
 
 app.get('/results', function(req, res){
   console.log(req.query);
-
-  if('productName' in req.query && req.query.name instanceof String){
-    name = req.query.name  
-  }
-  console.log(name);
-
+  // if('productName' in req.query && req.query.name instanceof String){
+  //   name = req.query.name  
+  // }
+  // console.log(name);
   var qs = {};
   if( 'brand' in req.query && req.query.brand ) {
     qs.brand = req.query.brand;
@@ -100,7 +98,6 @@ app.get('/results', function(req, res){
   if( 'tag' in req.query && req.query.tag instanceof Array) {
     qs.product_tags = req.query.tag.join(",");
   }
-
   request({
     url: 'http://makeup-api.herokuapp.com/api/v1/products.json?',
     qs: qs
@@ -113,6 +110,7 @@ app.get('/results', function(req, res){
     }
   });
 });
+
 
 app.use('/auth', require('./controllers/auth'));
 app.use('/vanity', require('./controllers/vanity'));

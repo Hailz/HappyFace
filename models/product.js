@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var product = sequelize.define('product', {
-    vanityId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
     name: DataTypes.STRING,
     productType: DataTypes.STRING,
     imageLink: DataTypes.TEXT,
@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        models.product.belongsTo(models.user, {through: models.vanity});
+        models.product.belongsTo(models.user);
       }
     }
   });
