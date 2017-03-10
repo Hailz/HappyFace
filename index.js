@@ -43,7 +43,7 @@ app.get('/vanity', isLoggedIn, function(req, res){
   res.render("vanity");
 });
 
-// all the vanity links
+// all the vanity views
 app.get('/productType/blush', isLoggedIn, function(req, res){
   res.render("productType/blush");
 });
@@ -80,8 +80,8 @@ app.get('/productType/nailpolish', isLoggedIn, function(req, res){
   res.render("productType/nailpolish");
 });
 
+//API call
 app.get('/results', function(req, res){
-
   var qs = {};
   if( 'brand' in req.query && req.query.brand ) {
     qs.brand = req.query.brand;
@@ -109,7 +109,6 @@ app.get('/results', function(req, res){
 app.use('/auth', require('./controllers/auth'));
 app.use('/vanity', require('./controllers/vanity'));
 app.use('/productType', require('./controllers/productType'));
-
 app.use('/delete', require('./controllers/delete'));
 
 //listen
