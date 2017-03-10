@@ -5,7 +5,6 @@ var db = require('../models');
 var app =express();
 
 router.post('/', function(req, res){
-  console.log("************************************************************" + req.body.id + " should be 13 or 5");
   db.product.destroy({
     where: {
       id: req.body.id
@@ -15,6 +14,5 @@ router.post('/', function(req, res){
   });
 });
 
-  
 //export
 module.exports = router;

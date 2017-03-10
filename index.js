@@ -81,11 +81,6 @@ app.get('/productType/nailpolish', isLoggedIn, function(req, res){
   res.render("productType/nailpolish");
 });
 
-//search
-// app.get('/', function(req, res){
-//   console.log(req.body);
-// });
-
 app.get('/results', function(req, res){
   console.log(req.query);
   // if('productName' in req.query && req.query.name instanceof String){
