@@ -1,8 +1,8 @@
 <div>
   <a href="<%= product.productLink %>">
     <img src="<%= product.imageLink %>">
+    <h3><%= product.name %></h3>
   </a>
-  <h3><%= product.name %></h3>
   <form method="POST" action="/delete">
     <input hidden type="text" name="id" value="<%= product.id %>">
     <input type="submit" name="submit" value="Delete">

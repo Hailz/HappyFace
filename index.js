@@ -8,7 +8,6 @@ var passport = require('./config/passportConfig');
 var isLoggedIn = require('./middleware/isLoggedIn');
 var request = require('request');
 var db = require('./models');
-var name;
 
 require('dotenv').config();
 
@@ -82,11 +81,7 @@ app.get('/productType/nailpolish', isLoggedIn, function(req, res){
 });
 
 app.get('/results', function(req, res){
-  console.log(req.query);
-  // if('productName' in req.query && req.query.name instanceof String){
-  //   name = req.query.name  
-  // }
-  // console.log(name);
+
   var qs = {};
   if( 'brand' in req.query && req.query.brand ) {
     qs.brand = req.query.brand;
@@ -100,7 +95,11 @@ app.get('/results', function(req, res){
   }, function(error, response, body){
     if(!error && response.statusCode == 200){
       var dataObj = JSON.parse(body);
-      res.render('results', {results:dataObj});
+      var searchTerm = req.query.productName;
+      function capitalizeFirstLetter(searchTerm) {
+        return searchTerm.charAt(0).toUpperCase() + searchTerm.slice(1);
+      }
+      res.render('results', {results:dataObj, productName:capitalizeFirstLetter(searchTerm)});
     } else{
       res.send('Oh bananas. Error ' + error);
     }
