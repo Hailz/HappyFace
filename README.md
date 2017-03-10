@@ -24,6 +24,9 @@ I finished getting authentication running. I did a little more light styling and
 # Day 3
 Finished selecting what API data I wanted to keep and work with. Started working on saving products to the vanity.
 
+# Day 4
+Got products to save to the products table and started working on displaying products in the vanity and deleting products that are no longer wanted.
+
 # Technologies Used
 
 * Express
@@ -36,7 +39,6 @@ Finished selecting what API data I wanted to keep and work with. Started working
 I struggled a lot with the Node/Express concepts. Working my recently developed skills into it was difficult for me. I found a lot of the things that I had done before couldn't be implemented in the same ways.
 
 # Next Steps
-*Create favorite saving functionality
 *Create favorite deleting functionality
 *Create product name search functionality
 *Style

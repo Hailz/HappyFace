@@ -3,10 +3,11 @@
 
 <div class="container box">
     <form method="get" action="/results" id="searchForm">
-      <div>
+      <div class="form-group formTop">
         <input type="text" name="productName" placeholder="Enter product name" id="productName">
         <input type="submit">
       </div>
+      <div class="form-group">
       <!-- Tag filter options -->
       <input type="checkbox" name="tag" value="vegan"><label>Vegan</label>
       <input type="checkbox" name="tag" value="natural"><label>Natural</label>
@@ -14,7 +15,8 @@
       <input type="checkbox" name="tag" value="fairtrade"><label>Fair Trade</label>
       <input type="checkbox" name="tag" value="gluten free"><label>Gluten Free</label>
       <input type="checkbox" name="tag" value="non-gmo"><label>Non-GMO</label>
-      <br>
+      </div>
+      <div class="form-group">
       <!-- Brand filter options -->
       <label>Brand:</label>
       <select name="brand">
@@ -56,6 +58,7 @@
         <option name="brand" value="suncoat">Suncoat</option>
        <!--  <option name="brand" value="wet n wild">Wet n' Wild</option> -->
         <option name="brand" value="zorah">Zorah</option>
+        </div>
       </select>
     </form>
 </div>

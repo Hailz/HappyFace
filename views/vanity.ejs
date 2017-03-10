@@ -1,23 +1,66 @@
 <h1>My Vanity</h1>
 
-<div>
-  <% products.forEach(function(product){ %>
-    <a href="<%= product.product_link %>">
-    <img src="<%= product.image_link %>">
-    </a>
-    <h3><%= product.name %></h3>
-  <% }) %>
-</div>
-
-<!-- Goal navigation
 <div class="text-center box">
-  <a class="btn btn-link type" href="./productType/blush">Blush</a>
-  <a class="btn btn-link type" href="./productType/bronzer">Bronzer</a>
-  <a class="btn btn-link type" href="./productType/eyeliner">Eyeliner</a>
-  <a class="btn btn-link type" href="./productType/eyeshadow">Eyeshadow</a>
-  <a class="btn btn-link type" href="./productType/foundation">Foundation</a>
-  <a class="btn btn-link type" href="./productType/lipliner">Lip Liner</a>
-  <a class="btn btn-link type" href="./productType/lipstick">Lipstick</a>
-  <a class="btn btn-link type" href="./productType/mascara">Mascara</a>
-  <a class="btn btn-link type" href="./productType/nailpolish">Nail Polish</a>
-</div> -->
+  <div class="vanityNav">
+    <form method="GET" action="/productType/face">
+      <input hidden type="text" name="productType" value="blush">
+      <input class="btn" type="submit" name="submit" value="Blush">
+    </form>
+  </div>
+  
+  <div class="vanityNav">
+    <form method="GET" action="/productType/face">
+      <input hidden type="text" name="productType" value="bronzer">
+      <input class="btn" type="submit" name="submit" value="Bronzer">
+    </form>
+  </div>
+
+  <div class="vanityNav"> 
+    <form method="GET" action="/productType/face">
+      <input hidden type="text" name="productType" value="eyeliner">
+      <input class="btn" type="submit" name="submit" value="Eyeliner">
+    </form>
+  </div>
+
+  <div class="vanityNav">
+    <form method="GET" action="/productType/face">
+      <input hidden type="text" name="productType" value="eyeshadow">
+      <input class="btn" type="submit" name="submit" value="Eyeshadow">
+    </form>
+  </div>
+
+  <div class="vanityNav">
+    <form method="GET" action="/productType/face">
+      <input hidden type="text" name="productType" value="foundation">
+      <input class="btn" type="submit" name="submit" value="Foundation">
+    </form>
+  </div>
+
+  <div class="vanityNav">
+    <form method="GET" action="/productType/face">
+      <input hidden type="text" name="productType" value="lipliner">
+      <input class="btn" type="submit" name="submit" value="Lipliner">
+    </form>
+  </div>
+
+  <div class="vanityNav">
+    <form method="GET" action="/productType/face">
+      <input hidden type="text" name="productType" value="lipstick">
+      <input class="btn" type="submit" name="submit" value="Lipstick">
+    </form>
+  </div>
+
+  <div class="vanityNav">
+    <form method="GET" action="/productType/face">
+      <input hidden type="text" name="productType" value="mascara">
+      <input class="btn" type="submit" name="submit" value="Mascara">
+    </form>
+  </div>
+    <form method="GET" action="/productType/face">
+      <input hidden type="text" name="productType" value="nailpolish">
+      <input class="btn" type="submit" name="submit" value="Nailpolish">
+    </form> 
+  <div class="vanityNav">
+    
+  </div> 
+</div>

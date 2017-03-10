@@ -1,1 +1,10 @@
 <h1>Mascara</h1>
+
+<div>
+  <% product.forEach(function(product){ %>
+    <a href="<%= product.productLink %>">
+    <img src="<%= product.imageLink %>">
+    </a>
+    <h3><%= product.name %></h3>
+  <% }) %>
+</div>

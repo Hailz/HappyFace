@@ -115,5 +115,7 @@ app.get('/results', function(req, res){
 app.use('/auth', require('./controllers/auth'));
 app.use('/vanity', require('./controllers/vanity'));
 
+app.use('/productType', require('./controllers/productType'));
+
 //listen
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
