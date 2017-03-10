@@ -6,14 +6,14 @@ var app =express();
 
 router.post('/', function(req, res){
   console.log(req.body.productName);
-  db.product.create({
+  db.product.findOrCreate({
     userId: req.user.id, //adds current user id
     name: req.body.name, //adds name of product
     productType: req.body.productType, //adds product type
     imageLink: req.body.imageLink, //adds image link
     productLink: req.body.productLink //adds product link
   })
-  .then(function(product){
+  .spread(function(product){
     res.redirect("/vanity"); //redirect to vanity page
   })
   .catch(function(error){

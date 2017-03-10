@@ -82,9 +82,9 @@ app.get('/productType/nailpolish', isLoggedIn, function(req, res){
 });
 
 //search
-app.get('/', function(req, res){
-  console.log(req.body);
-});
+// app.get('/', function(req, res){
+//   console.log(req.body);
+// });
 
 app.get('/results', function(req, res){
   console.log(req.query);
@@ -114,8 +114,9 @@ app.get('/results', function(req, res){
 
 app.use('/auth', require('./controllers/auth'));
 app.use('/vanity', require('./controllers/vanity'));
-
 app.use('/productType', require('./controllers/productType'));
+
+app.use('/delete', require('./controllers/delete'));
 
 //listen
 app.listen(process.env.PORT || 3000);

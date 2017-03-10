@@ -25,7 +25,7 @@ I finished getting authentication running. I did a little more light styling and
 Finished selecting what API data I wanted to keep and work with. Started working on saving products to the vanity.
 
 # Day 4
-Got products to save to the products table and started working on displaying products in the vanity and deleting products that are no longer wanted.
+Got products to save to the products table and displayed products in the various vanity sections. Started working on deleting products that are no longer wanted.
 
 # Technologies Used
 

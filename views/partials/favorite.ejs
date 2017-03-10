@@ -3,4 +3,9 @@
     <img src="<%= product.imageLink %>">
   </a>
   <h3><%= product.name %></h3>
+  <form method="POST" action="/delete">
+    <input hidden type="text" name="id" value="<%= product.id %>">
+    <% console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@' + product.id) %>
+    <input type="submit" name="submit" value="Delete">
+  </form>
 </div>    
