@@ -1,1 +1,12 @@
 <h1>Eyeshadow</h1>
+
+<% if (product.length > 0){ %>
+ <div>
+    <% product.forEach(function(product){ %>
+      <% include ../partials/favorite.ejs %>
+    <% }) %>
+  </div>
+
+<% } else{ %>
+  <h3>You don't have any saved products of this type!</h3>
+<% } %>
