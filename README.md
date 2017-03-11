@@ -3,22 +3,29 @@ Project 2
 
 # Technical Requirements
 
-*Have at least 2 models (more if they make sense) -- ideally a user model and one that represents the main functional idea for your app
+* Have at least 2 models (more if they make sense) -- ideally a user model and one that represents the main functional idea for your app
 
-*Include sign up/log in functionality, with hashed passwords & an authorization flow
+* Include sign up/log in functionality, with hashed passwords & an authorization flow
 
-*Incorporate at least one API. Examples include Yelp, Tumblr, Facebook, and others on Mashape.
+* Incorporate at least one API. Examples include Yelp, Tumblr, Facebook, and others on Mashape.
 
-*Have complete RESTful routes for at least one of your resources with GET, POST, PUT, and DELETE
+* Have complete RESTful routes for at least one of your resources with GET, POST, PUT, and DELETE
 
-*Utilize an ORM to create a database table structure and interact with your relationally-stored data
+* Utilize an ORM to create a database table structure and interact with your relationally-stored data
 
-*Include wireframes that you designed during the planning process
+* Include wireframes that you designed during the planning process
 
-*Have semantically clean HTML and CSS
+* Have semantically clean HTML and CSS
 
-*Be deployed online and accessible to the public
+* Be deployed online and accessible to the public
 
+# User Stories
+Jude is 25, she cares about the environment, animals, and likes to wear a little makeup on special occasions. It's important to her that the products she purchases allign with her ethics.
+  * As a user Jane wants to be able to conveniently check in her makeup is vegan and fair trade.
+
+Christina is 22, she loves makeup but is allergic to gluten and can be a little forgetful of what's currently in her collection. Reading makeup labels can be difficult as they don't really follow universal labeling practices. Christina needs a simpler way to know that the product she's looking at in gluten free and she wants to be able to save a list of the products she owns to help her avoid purchasing duplicates so she can purchase more unique products.
+  * As a user Christina wants to be able to check if a product is gluten free.
+  * As a user Christina wants to be able to save her products to help her avoid purchasing the same product mutiple times.
 
 # Progress Pictures:
 
@@ -39,6 +46,7 @@ Figured out how to send search term information to results view and got search t
 
 # Technologies Used
 
+* Makeup API (http://makeup-api.herokuapp.com/)
 * Express
 * Node.js
 * HTML
@@ -52,4 +60,4 @@ I struggled a lot with the Node/Express concepts. I found out I had been working
 
 *Style
 
-*Use second API to allow for searches by barcode
+* Use second API to allow for searches by barcode
