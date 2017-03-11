@@ -39,7 +39,7 @@ app.get('/', function(req, res){
   res.render('home');
 });
 
-app.get('/vanity', function(req, res){
+app.get('/vanity',  isLoggedIn, function(req, res){
   res.render("vanity");
 });
 

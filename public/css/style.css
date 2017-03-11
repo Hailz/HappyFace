@@ -1,0 +1,59 @@
+body{
+  background-color: rgba(121,64,68, .8);
+  
+}
+header{
+  margin: auto;
+}
+a{
+  color: black;
+}
+h1{
+  font-size: 80px;
+  font-family: 'Bad Script', cursive;
+}
+h3{
+  font-family: 'Bad Script', cursive;
+}
+.btn{
+  color: black;
+}
+.type{
+  font-size: 20px;
+}
+.navButtons{
+  background-color: white;
+  width: 75%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-right: 8%;
+  display: inline-block;
+}
+.nav{
+  display: inline-block;
+  margin-left: 3%;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+.vanityRow{
+  display: inline-block;
+}
+.vanityButtons{
+  margin: 10%;
+}
+.happyFace{
+  border-radius: 50%;
+}
+.box{
+  border-radius: 2px;
+  background-color: rgba(190,151,151, .9);
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+}
+.formTop{
+  margin-top: 2%;
+}
+.result{
+  display: inline-block;
+  max-width: 33%;
+  background-color: white;
+}
