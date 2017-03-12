@@ -5,7 +5,6 @@ var db = require('../models');
 var app =express();
 
 router.post('/', function(req, res){
-  console.log(req.body.productName);
   db.product.findOrCreate({
     where: {
       userId: req.user.id, //adds current user id
@@ -16,7 +15,7 @@ router.post('/', function(req, res){
     }
   })
   .spread(function(product){
-    res.redirect("/vanity"); //redirect to vanity page
+    res.redirect("back"); //redirect to vanity page
   })
   .catch(function(error){
     res.status(400).send('Whoops');

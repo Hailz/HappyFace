@@ -1,7 +1,5 @@
 body{
   background-color: rgba(121,64,68, .8);
-  /*font-size: 180%;*/
-  
 }
 header{
   margin: auto;
@@ -11,10 +9,16 @@ a{
 }
 h1{
   font-size: 80px;
-  font-family: 'Bad Script', cursive;
+  /*font-family: 'Bad Script', cursive;*/
+  font-family: 'Shadows Into Light Two', cursive;
 }
 h3{
-  font-family: 'Bad Script', cursive;
+  /*font-family: 'Bad Script', cursive;*/
+  font-family: 'Shadows Into Light Two', cursive;
+}
+.userName{
+  font-size: 50px;
+  font-family: 'Shadows Into Light Two', cursive;
 }
 .btn{
   color: black;
@@ -27,8 +31,6 @@ h3{
   width: 75%;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  /*margin-right: 8%;*/
-  /*padding-right: 8%;*/
   display: inline-block;
 }
 .nav{

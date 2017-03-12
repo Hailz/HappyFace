@@ -1,34 +1,30 @@
-<div>
+<header>
 <h1>Welcome to Your Profile</h1>
-<h2><%= user.username %></h2>
-</div>
-<!-- 
-email
-username
-password
-firstname
-lastname -->
-<div>
+<h2 class="userName"><%= user.username %></h2>
+</header>
+
+<content>
   <h3>Would you like to edit your profile?</h3>
   <form method="GET" action="/profile/update">
-    <label for="email">Email:</label>
-    <input type="text" name="email" value="<%= user.email %>">
-    <label for="username">Username:</label>
-    <input type="text" name="username" value="<%= user.username %>">
+    <label class="form" for="email">Email:</label>
+    <input class="form" type="text" name="email" value="<%= user.email %>">
+    <label class="form" for="username">Username:</label>
+    <input class="form"> type="text" name="username" value="<%= user.username %>">
     <br>
-    <label for="firstname">First Name:</label>
-    <input type="text" name="firstname" value="<%= user.firstname %>">
-    <label for="lastname">Last Name:</label>
-    <input type="text" name="lastname" value="<%= user.lastname %>">
-    <input type="submit" name="submit" value="Update">
+    <label class="form" for="firstname">First Name:</label>
+    <input class="form"> type="text" name="firstname" value="<%= user.firstname %>">
+    <label class="form" for="lastname">Last Name:</label>
+    <input class="form"> type="text" name="lastname" value="<%= user.lastname %>">
+    <input class="btn" type="submit" name="submit" value="Update">
   </form>
-</div>
+</content>
 
 <div>
-  <h4>Would you like to delete your account?</h4>
-  <h5>We'll be sad to see you go.</h5>
+  <h3>Would you like to delete your account?</h3>
+  <h4>We'll be sad to see you go...</h4>
+  <p>Account deletions are final and can not be undone.</p>
   <form method="POST" action="/profile/delete">
     <input hidden type="text" name="id" value="<%= user.id %>">
-    <input type="submit" name="submit" value="Delete Account">
+    <input class="btn" type="submit" name="submit" value="Delete Account">
   </form> 
 </div>

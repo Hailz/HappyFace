@@ -39,6 +39,7 @@ app.get('/', function(req, res){
   res.render('home');
 });
 
+//gives profile page user info then shows it
 app.get('/profile', isLoggedIn, function(req, res){
   db.user.find({
     where: {
@@ -53,7 +54,7 @@ app.get('/vanity',  isLoggedIn, function(req, res){
   res.render("vanity");
 });
 
-// all the vanity views
+// all the vanity product type views
 app.get('/productType/blush', isLoggedIn, function(req, res){
   res.render("productType/blush");
 });
