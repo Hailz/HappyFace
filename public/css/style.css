@@ -1,5 +1,6 @@
 body{
   background-color: rgba(121,64,68, .8);
+  /*font-size: 180%;*/
   
 }
 header{
@@ -26,7 +27,8 @@ h3{
   width: 75%;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  margin-right: 8%;
+  /*margin-right: 8%;*/
+  /*padding-right: 8%;*/
   display: inline-block;
 }
 .nav{
@@ -38,11 +40,25 @@ h3{
 .vanityRow{
   display: inline-block;
 }
+.vanityNav{
+  display: inline-block;
+}
 .vanityButtons{
   margin: 10%;
+  display: inline-block;
 }
-.happyFace{
-  border-radius: 50%;
+.vanityIcon{
+  max-width: 20%;
+  max-height: 20%;
+}
+.vanityImgs{
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+.resultImg{
+  width: 33%;
+  height: 33%;
 }
 .box{
   border-radius: 2px;
@@ -55,5 +71,6 @@ h3{
 .result{
   display: inline-block;
   max-width: 33%;
+  max-height: 33%;
   background-color: white;
 }

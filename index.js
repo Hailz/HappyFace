@@ -39,6 +39,16 @@ app.get('/', function(req, res){
   res.render('home');
 });
 
+app.get('/profile', isLoggedIn, function(req, res){
+  db.user.find({
+    where: {
+      id: req.user.id
+    }
+  }).then(function(user){
+    res.render('profile', {user:user})
+  });
+});
+
 app.get('/vanity',  isLoggedIn, function(req, res){
   res.render("vanity");
 });
@@ -80,13 +90,16 @@ app.get('/productType/nailpolish', isLoggedIn, function(req, res){
   res.render("productType/nailpolish");
 });
 
+
 //API call
 app.get('/results', function(req, res){
   var qs = {};
   if( 'brand' in req.query && req.query.brand ) {
     qs.brand = req.query.brand;
   }
-  if( 'tag' in req.query && req.query.tag instanceof Array) {
+  if( 'tag' in req.query && req.query.tag !== []) {
+    qs.product_tags = req.query.tag;
+  }else if( 'tag' in req.query && req.query.tag instanceof Array) {
     qs.product_tags = req.query.tag.join(",");
   }
   request({
@@ -108,6 +121,7 @@ app.get('/results', function(req, res){
 
 app.use('/auth', require('./controllers/auth'));
 app.use('/vanity', require('./controllers/vanity'));
+app.use('/profile', require('./controllers/profile'));
 app.use('/productType', require('./controllers/productType'));
 app.use('/delete', require('./controllers/delete'));
 

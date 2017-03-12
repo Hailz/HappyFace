@@ -42,7 +42,10 @@ Finished selecting what API data I wanted to keep and work with. Started working
 Got products to save to the products table and displayed products in the various vanity sections and created delete functionality.
 
 # Day 5
-Figured out how to send search term information to results view and got search term functionality working, reguardless of case. Did some styling work.
+Figured out how to send search term information to results view and got search term functionality working, reguardless of case. Did some styling work. Discovered tag searches weren't working properly and fixed it to work when only checking for a single tag.
+
+# Day 6
+Created a profile view and created edit and delete profile functionality. Did some more styling. Also fixed it so that eyebrow products wouldn't show up in the search results because the API doesn't have any information for those products other then brand name.
 
 # Technologies Used
 
@@ -58,6 +61,6 @@ I struggled a lot with the Node/Express concepts. I found out I had been working
 
 # Next Steps
 
-*Style
+* Style
 
 * Use second API to allow for searches by barcode

@@ -2,6 +2,7 @@
 
 
 <% var searchEntered = false; %>
+<% var attemptedMatch = false; %>
 
 <% if (productName !== " "){ %>
   <% searchEntered = true; %>
@@ -9,14 +10,19 @@
 
 <% if (results.length > 0){ %>
   <% results.forEach(function(result){ %>
-    <% if (searchEntered && result.name.includes(productName)){ %>
+    <% if (searchEntered && result.name.includes(productName) && result.product_type !== "eyebrows"){ %>
       <% include ./partials/result.ejs %>
+    <% }else if(searchEntered){ %>
+      <% attemptedMatch = true; %>
     <% } %>
-    <% if (searchEntered == false){ %>
+    <% if (searchEntered == false && result.product_type !== "eyebrows"){ %>
       <% include ./partials/result.ejs %>
     <% } %>
   <% }) %>
-<% }else{%>
+  <% if (attemptedMatch == true){ %>
+    <h3>Sorry, no products currently match your search terms.</h3>
+  <% } %>
+<% }else{ %>
   <h3>Sorry, no products currently match your search terms.</h3>
 <% } %>
 
