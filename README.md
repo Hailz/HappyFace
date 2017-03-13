@@ -28,8 +28,9 @@ Christina is 22, she loves makeup but is allergic to gluten and can be a little 
   * As a user Christina wants to be able to save her products to help her avoid purchasing the same product mutiple times.
 
 # Progress Pictures:
- wireframe1.jpg
- wireframe2.jpg
+ <img src="/img/wireframe1.jpg"/ width="350">
+
+ <img src="/img/wireframe2.jpg"/ width="350">
 
 # Day 1
 I drew out a rough draft of what I wanted my views to look like, how I wanted to plan my tables, and read into how the makeup API works. I started working on some basic styling and getting authentication up and running.
