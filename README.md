@@ -1,5 +1,6 @@
 # HappyFace
 Project 2
+https://projecthappyface.herokuapp.com
 
 # Technical Requirements
 
@@ -53,6 +54,7 @@ Created a profile view and created edit and delete profile functionality. Did so
 # Technologies Used
 
 * Makeup API (http://makeup-api.herokuapp.com/)
+* Heroku
 * Express
 * Node.js
 * HTML
