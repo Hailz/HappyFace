@@ -3,7 +3,7 @@
     <img class="resultImg img-thumbnail" src="<%= product.imageLink %>">
     <h3 class="productName"><%= product.name %></h3>
   </a>
-  <form method="POST" action="/delete">
+  <form method="POST" action="/productType/delete">
     <input hidden type="text" name="id" value="<%= product.id %>">
     <input class="btn" type="submit" name="submit" value="Delete">
   </form>

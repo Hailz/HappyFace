@@ -15,7 +15,7 @@ router.post('/', function(req, res){
     }
   })
   .spread(function(product){
-    res.redirect("back"); //redirect to vanity page
+    res.redirect("back");
   })
   .catch(function(error){
     res.status(400).send('Whoops');

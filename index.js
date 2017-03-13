@@ -123,7 +123,6 @@ app.use('/auth', require('./controllers/auth'));
 app.use('/vanity', require('./controllers/vanity'));
 app.use('/profile', require('./controllers/profile'));
 app.use('/productType', require('./controllers/productType'));
-app.use('/delete', require('./controllers/delete'));
 
 //listen
 app.listen(process.env.PORT || 3000);

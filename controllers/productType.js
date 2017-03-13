@@ -16,6 +16,16 @@ router.get('/face', function(req, res){
   });
 });
 
+router.post('/delete', function(req, res){
+  db.product.destroy({
+    where: {
+      id: req.body.id
+    }
+  }).then(function(product){
+    res.redirect('/vanity');
+  });
+});
+
   
 //export
 module.exports = router;
