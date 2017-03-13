@@ -39,7 +39,6 @@ app.get('/', function(req, res){
   res.render('home');
 });
 
-//gives profile page user info then shows it
 app.get('/profile', isLoggedIn, function(req, res){
   db.user.find({
     where: {

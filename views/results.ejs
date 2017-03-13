@@ -11,13 +11,13 @@
 
 <% if (results.length > 0){ %>
   <% results.forEach(function(result){ %>
-    <% if (searchEntered && result.name.includes(productName) && result.product_type !== "eyebrows"){ %>
+    <% if (searchEntered && result.name.includes(productName) && result.product_type !== "eyebrow"){ %>
       <% include ./partials/result.ejs %>
       <% runThrough = true %>
     <% }else if(searchEntered){ %>
       <% attemptedMatch = true; %>
     <% } %>
-    <% if (searchEntered == false && result.product_type !== "eyebrows"){ %>
+    <% if (searchEntered == false && result.product_type !== "eyebrow"){ %>
       <% include ./partials/result.ejs %>
     <% } %>
   <% }) %>
