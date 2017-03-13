@@ -21,13 +21,15 @@ Project 2
 
 # User Stories
 Jude is 25, she cares about the environment, animals, and likes to wear a little makeup on special occasions. It's important to her that the products she purchases allign with her ethics.
-  * As a user Jane wants to be able to conveniently check in her makeup is vegan and fair trade.
+  * As a user Jude wants to be able to conveniently check in her makeup is vegan or fair trade.
 
 Christina is 22, she loves makeup but is allergic to gluten and can be a little forgetful of what's currently in her collection. Reading makeup labels can be difficult as they don't really follow universal labeling practices. Christina needs a simpler way to know that the product she's looking at in gluten free and she wants to be able to save a list of the products she owns to help her avoid purchasing duplicates so she can purchase more unique products.
   * As a user Christina wants to be able to check if a product is gluten free.
   * As a user Christina wants to be able to save her products to help her avoid purchasing the same product mutiple times.
 
 # Progress Pictures:
+ wireframe1.jpg
+ wireframe2.jpg
 
 # Day 1
 I drew out a rough draft of what I wanted my views to look like, how I wanted to plan my tables, and read into how the makeup API works. I started working on some basic styling and getting authentication up and running.
