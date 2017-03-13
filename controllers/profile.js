@@ -4,15 +4,6 @@ var request = require('request');
 var db = require('../models');
 var app =express();
 
-
-router.get('/', function(req, res){
-  db.user.find({
-    where: {id: req.user.id}
-  }).then(function(user){
-    res.render('profile',{user:user});
-  });
-});
-
 router.get('/update', function(req, res){
   db.user.update({
     email: req.query.email,
@@ -22,7 +13,7 @@ router.get('/update', function(req, res){
   }, {
     where: {id: req.user.id}
   }).then(function(user){
-      res.render('/')
+      res.redirect('back')
   });
 });
 

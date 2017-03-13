@@ -10,7 +10,14 @@ a{
 h1{
   font-size: 80px;
   /*font-family: 'Bad Script', cursive;*/
-  font-family: 'Shadows Into Light Two', cursive;
+  /*font-family: 'Shadows Into Light Two', cursive;*/
+  font-family: 'Niconne', cursive;
+
+  margin-bottom: 2%;
+}
+h2{
+  font-family: 'Bad Script', cursive;
+  padding-top: 2%;
 }
 h3{
   /*font-family: 'Bad Script', cursive;*/
@@ -18,10 +25,13 @@ h3{
 }
 .userName{
   font-size: 50px;
-  font-family: 'Shadows Into Light Two', cursive;
+  font-family: 'Bad Script', cursive;
 }
 .btn{
   color: black;
+}
+.profileBtn{
+  margin-bottom: 1%;
 }
 .type{
   font-size: 20px;
@@ -50,29 +60,37 @@ h3{
   display: inline-block;
 }
 .vanityIcon{
-  max-width: 20%;
-  max-height: 20%;
+  width: 20%;
+  height: 20%;
+}
+.vanityPageIcons{
+  width: 10%;
+  height: 10%;
 }
 .vanityImgs{
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   display: inline-block;
 }
 .resultImg{
   width: 33%;
   height: 33%;
 }
+.productName{
+  font-size: 125%;
+}
 .box{
   border-radius: 2px;
   background-color: rgba(190,151,151, .9);
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+  margin: auto;
 }
 .formTop{
   margin-top: 2%;
 }
 .result{
   display: inline-block;
-  max-width: 33%;
-  max-height: 33%;
-  background-color: white;
+  width: 33%;
+  height: 33%;
+  margin: 1%;
 }

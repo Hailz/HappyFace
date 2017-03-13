@@ -5,6 +5,7 @@
     <form method="get" action="/results" id="searchForm">
       <div class="form-group formTop">
         <p>Search for products by name, tag, brand, or any combinaton of the three!</p>
+        <p>Log in to save products.</p>
         <input type="text" name="productName" placeholder="Enter product name" id="productName">
         <input type="submit">
       </div>
@@ -19,6 +20,7 @@
       </div>
       <div class="form-group">
       <!-- Brand filter options -->
+      <!-- API filter doesn't seem to work with brand names with a space in them -->
       <label>Brand:</label>
       <select name="brand">
         <option name="brand" value="" default>Any</option>
@@ -47,14 +49,14 @@
         <option name="brand" value="nyx">NYX</option>
         <option name="brand" value="orly">Orly</option>
         <option name="brand" value="pacifica">Pacifica</option>
-      <!--   <option name="brand" value="physicians formula">Physicians Formula</option>
+        <option name="brand" value="physicians formula">Physicians Formula</option>
         <option name="brand" value="piggy paint">Piggy Paint</option>
-        <option name="brand" value="pure anada">Pure Anada</option> -->
+        <option name="brand" value="pure anada">Pure Anada</option>
         <option name="brand" value="revlon">Revlon</option>
       <!--   <option name="brand" value="salon perfect">Salon Perfect</option> -->
         <option name="brand" value="sante">Sante</option>
-     <!--    <option name="brand" value="sinful colours">Sinful Colours</option>
-        <option name="brand" value="smashbox">Smash Box</option> -->
+       <!--  <option name="brand" value="sinful colours">Sinful Colours</option> -->
+        <option name="brand" value="smashbox">Smashbox</option>
         <option name="brand" value="stila">Stila</option>
         <option name="brand" value="suncoat">Suncoat</option>
        <!--  <option name="brand" value="wet n wild">Wet n' Wild</option> -->
