@@ -2,7 +2,7 @@
   "name": "HappyFace",
   "version": "1.0.0",
   "description": "Project #2",
-  "main": "bcrypt_test.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
