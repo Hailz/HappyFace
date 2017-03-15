@@ -10,9 +10,9 @@ var db        = {};
 var sequelize;
 
 
-if (process.env.DATABASE_URL) {
+if (process.env.DATABASE_URL || env = "production") {
   // the application is executed on Heroku ... use the postgres database
-  sequelize = new Sequelize(process.env.DATABASE_URL, {
+  sequelize = new Sequelize(process.env.DATABASE_URL, null, null, {
     dialect:  'postgres',
     protocol: 'postgres',
     logging:  true //false
