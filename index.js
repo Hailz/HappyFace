@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('./config/passportConfig');
-var config = require('./config/config.json')
 var isLoggedIn = require('./middleware/isLoggedIn');
 var request = require('request');
 var db = require('./models');
