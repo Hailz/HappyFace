@@ -67,5 +67,4 @@ I struggled a lot with the Node/Express concepts. I found out I had been working
 # Next Steps
 
 * Style
-
 * Use second API to allow for searches by barcode
