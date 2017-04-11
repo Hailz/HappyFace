@@ -35,7 +35,7 @@ app.use(function(req, res, next){ //custom middleware
 });
 
 //routes
-app.get('/', function(req, res){
+app.get('/home', function(req, res){
   res.render('home');
 });
 
