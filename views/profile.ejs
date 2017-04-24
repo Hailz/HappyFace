@@ -17,7 +17,7 @@
       <label for="lastname">Last Name:</label>
       <input type="text" name="lastname" value="<%= user.lastname %>">
       <br>
-      <input class="btn profileBtn" type="submit" name="submit" value="Update">
+      <input class="btn profileBtn btnColor" type="submit" name="submit" value="Update">
     </form>
   </div>
   <div>
@@ -26,7 +26,7 @@
     <p>Account deletions are final and can not be undone.</p>
     <form method="POST" action="/profile/delete">
       <input hidden type="text" name="id" value="<%= user.id %>">
-      <input class="btn profileBtn" type="submit" name="submit" value="Delete Account">
+      <input class="btn profileBtn btnColor" type="submit" name="submit" value="Delete Account">
     </form> 
   </div>
 </div>

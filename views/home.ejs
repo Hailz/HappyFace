@@ -4,12 +4,12 @@
 <div class="container box text-center">
     <form method="get" action="/results" id="searchForm">
       <div class="form-group formTop">
-        <p>Search for products by name, tag, brand, or any combinaton of the three!</p>
-        <p>Please log in to save products.</p>
-        <input type="text" name="productName" placeholder="Enter product name" id="productName">
-        <input type="submit">
+        <p class="h4">Search for products by name, tag, brand, or any combinaton of the three!</p>
+        <p class="h4">Please log in to save products.</p>
+        <input class="h4" type="text" name="productName" placeholder="Enter product name" id="productName">
+        <input type="submit" class="btn btnColor">
       </div>
-      <div class="form-group">
+      <div class="form-group h4">
       <!-- Tag filter options -->
       <input type="checkbox" name="tag" value="vegan"><label>Vegan</label>
       <input type="checkbox" name="tag" value="natural"><label>Natural</label>
@@ -18,7 +18,7 @@
       <input type="checkbox" name="tag" value="gluten free"><label>Gluten Free</label>
       <input type="checkbox" name="tag" value="non-gmo"><label>Non-GMO</label>
       </div>
-      <div class="form-group">
+      <div class="form-group h4">
       <!-- Brand filter options -->
       <!-- API filter doesn't seem to work with brand names with a space in them -->
       <label>Brand:</label>
@@ -65,3 +65,4 @@
       </select>
     </form>
 </div>
+

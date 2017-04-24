@@ -97,7 +97,7 @@ app.get('/results', function(req, res){
   if( 'brand' in req.query && req.query.brand ) {
     qs.brand = req.query.brand;
   }
-  if( 'tag' in req.query && req.query.tag !== []) {
+  if( 'tag' in req.query && req.query.tag.length == 1) {
     qs.product_tags = req.query.tag;
   }else if( 'tag' in req.query && req.query.tag instanceof Array) {
     qs.product_tags = req.query.tag.join(",");

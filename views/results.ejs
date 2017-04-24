@@ -9,6 +9,8 @@
   <% searchEntered = true; %>
 <% } %>
 
+<div class="row">
+
 <% if (results.length > 0){ %>
   <% results.forEach(function(result){ %>
     <% if (searchEntered && result.name.includes(productName) && result.product_type !== "eyebrow"){ %>
@@ -28,3 +30,4 @@
   <h3>Sorry, no products currently match your search terms.</h3>
 <% } %>
 
+</div>

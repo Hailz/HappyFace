@@ -1,10 +1,13 @@
-<div class="result">
-  <a href="<%= product.productLink %>">
-    <img class="resultImg img-thumbnail" src="<%= product.imageLink %>">
-    <h3 class="productName"><%= product.name %></h3>
-  </a>
-  <form method="POST" action="/productType/delete">
-    <input hidden type="text" name="id" value="<%= product.id %>">
-    <input class="btn" type="submit" name="submit" value="Delete">
-  </form>
-</div>    
+<div class="col-xs-6 col-sm-4 col-lg-3">
+  <div class="result box">
+    <a href="<%= product.productLink %>">
+      <img class="resultImg img-thumbnail" src="<%= product.imageLink %>">
+      <h3 class="productName"><%= product.name %></h3>
+    </a>
+    <form method="POST" action="/productType/delete">
+      <input hidden type="text" name="id" value="<%= product.id %>">
+      <input class="btn btnColor" type="submit" name="submit" value="Delete">
+    </form>
+  </div>
+</div> 
+   

@@ -5,35 +5,38 @@
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lora" rel="stylesheet">
+
+
   <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet">
 </head>
 <body>
 
   <header>
-    <div class="navButtons">
-      <a class=" btn btn-link nav" href="/">Search</a>
-      <a class="btn btn-link nav" href="/vanity">My Vanity</a>
-      <a class="btn btn-link nav" href="/profile">Profile</a>
-    </div>
-    <div class="nav text-center">
+    <nav class="navbar navbar-default">
+      <a class="btn btn-link" href="/">Search</a>
+      <a class="btn btn-link" href="/vanity">My Vanity</a>
+      <a class="btn btn-link" href="/profile">Profile</a>
       <% if(currentUser){ %>
-        <a href="/auth/logout">Logout</a>
+        <a class="pull-right btn btn-link" href="/auth/logout">Logout</a>
       <% }else{ %>
-        <a href="/auth/signup">Sign Up </a>
-        <label>/</label>
-        <a href="/auth/logIn"> Login</a>
+        <div class="pull-right">
+          <a class='btn btn-link' href="/auth/signup">Sign Up </a>
+          <label>/</label>
+          <a class='btn btn-link' href="/auth/logIn"> Login</a>
+        </div>
       <% } %>
-    </div>
+    </nav>
   </header>
-  <% include ./partials/alerts.ejs %>
-  <div class="container text-center">
+  <% include partials/alerts %>
+  <div class="container-fluid text-center">
     <%- body %>
   </div>
 
   <footer class="text-center">
     <h5>Made with ❤ by Hailey Dangel</h5>
   </footer>
-  
 </body>
 </html>
